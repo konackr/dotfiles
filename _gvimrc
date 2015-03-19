@@ -1,0 +1,32 @@
+"---------------------------------------------------------------------------
+" colorscheme
+syntax enable
+set background=dark
+"colorscheme solarized
+"colorscheme hybrid
+"colorscheme molokai
+colorscheme Tomorrow-Night
+"colorscheme Tomorrow
+"colorscheme Tomorrow-Night-Eighties
+"colorscheme Tomorrow-Night-Blue
+"colorscheme Tomorrow-Night-Bright
+
+"---------------------------------------------------------------------------
+set columns=168
+set lines=70
+"---------------------------------------------------------------------------
+if (exists('+colorcolumn'))
+    set colorcolumn=80
+    highlight ColorColumn ctermbg=9
+endif
+"---------------------------------------------------------------------------
+set guifont=源真ゴシック等幅_Regular:h12:cSHIFTJIS
+set linespace=3
+"---------------------------------------------------------------------------
+" タブページを常に表示
+set showtabline=2
+" gVimでもテキストベースのタブページを使う
+"---------------------------------------------------------------------------
+
+au BufRead,BufNewFile,BufReadPre *.coffee    set filetype=coffee
+autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
